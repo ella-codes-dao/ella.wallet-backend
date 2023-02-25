@@ -7,13 +7,13 @@ import (
 )
 
 type Config struct {
-	GormConnection     string `mapstructure:"GORM_CONNECTION"`
-	ServerPort         string `mapstructure:"SERVER_PORT"`
-	FlowNetwork        string `mapstructure:"FLOW_NETWORK"`
-	FlowDAOBackendAddr string `mapstructure:"FLOW_DAO_BACKEND_ADDR"`
-	FlowDAOBackendKey  string `mapstructure:"FLOW_DAO_BACKEND_KEY"`
-	FCLAppID           string `mapstructure:"FCL_APP_ID"`
-	GcpProjectID       string `mapstructure:"GCP_PROJECT_ID"`
+	GormConnection  string `mapstructure:"GORM_CONNECTION"`
+	ServerPort      string `mapstructure:"SERVER_PORT"`
+	FlowNetwork     string `mapstructure:"FLOW_NETWORK"`
+	FlowBackendAddr string `mapstructure:"FLOW_BACKEND_ADDR"`
+	FlowBackendKey  string `mapstructure:"FLOW_BACKEND_KEY"`
+	FCLAppID        string `mapstructure:"FCL_APP_ID"`
+	GcpProjectID    string `mapstructure:"GCP_PROJECT_ID"`
 }
 
 var AppConfig *Config

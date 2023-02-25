@@ -7,7 +7,7 @@ import (
 )
 
 type FlowClient struct {
-	accessNode *http.Client
+	AccessNode *http.Client
 }
 
 func NewClient() (*FlowClient, error) {
@@ -28,7 +28,7 @@ func NewClient() (*FlowClient, error) {
 	}
 
 	client := &FlowClient{
-		accessNode: flowClient,
+		AccessNode: flowClient,
 	}
 
 	return client, nil

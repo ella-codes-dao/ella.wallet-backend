@@ -18,12 +18,12 @@ type Queue struct {
 }
 
 type JobQueues struct {
-	KuCoin *Queue
+	Flow *Queue
 }
 
 func StartQueues() *JobQueues {
 	return &JobQueues{
-		KuCoin: initFlowQueue(),
+		Flow: initFlowQueue(),
 	}
 }
 
@@ -32,7 +32,7 @@ func (q *Queue) AddJob(job Job) {
 	log.Printf("New job %s added to %s queue", job.Name, q.name)
 }
 
-func (q *Queue) DoWork() {
+func (q *Queue) DoWork() { // TODO: This should also scale to simultaneously process multiple jobs
 	for {
 		select {
 		case <-q.ctx.Done():

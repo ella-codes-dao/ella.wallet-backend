@@ -40,5 +40,5 @@ func startFlow() {
 func startQueues() {
 	Queues = queue.StartQueues()
 
-	go Queues.KuCoin.DoWork()
+	go Queues.Flow.DoWork()
 }
