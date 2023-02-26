@@ -97,7 +97,7 @@ func createFlowAccountKey(key string, threshold int) (*flow.AccountKey, error) {
 	// construct an account key from the public key
 	accountKey := flow.NewAccountKey().
 		SetPublicKey(pk).
-		SetHashAlgo(crypto.SHA3_256). // pair this key with the SHA3_256 hashing algorithm
+		SetHashAlgo(crypto.SHA2_256). // pair this key with the SHA3_256 hashing algorithm
 		SetWeight(threshold)          // give this key full signing weight
 
 	return accountKey, nil

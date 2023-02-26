@@ -45,7 +45,7 @@ func CreateAddress(context *gin.Context) {
 					log.Println(err) // TODO: Logging!!!
 
 					errorCount += 1
-					if errorCount < 50 { // TODO: This is not a clean way to handle this, the transaction is not immediately available and you have to check several times before it stops erroring out...
+					if errorCount < 100 { // TODO: This is not a clean way to handle this, the transaction is not immediately available and you have to check several times before it stops erroring out...
 						continue
 					} else {
 						return err
