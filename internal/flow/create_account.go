@@ -61,7 +61,7 @@ func (fc *FlowClient) CreateAccount(keys models.CreateWalletRequest) (*flow.Iden
 
 	// generate an account creation createAccountTx
 	// createAccountTx, err := templates.CreateAccount(flowAccountKeys, nil, adminAddr)
-	createAccountTx, err := templates.CreateAccountAndFund(flowAccountKeys, nil, adminAddr, "00.001", flow.Testnet)
+	createAccountTx, err := templates.CreateAccountAndFund(flowAccountKeys, nil, adminAddr, "25.00", flow.Testnet)
 	if err != nil {
 		return nil, err
 	}
